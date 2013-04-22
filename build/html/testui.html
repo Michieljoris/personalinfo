@@ -1,0 +1,63 @@
+<div ng-controller="defaultController">
+  <alert close="msg='again'">{{msg}}</alert>
+  <button class="btn" ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+	<hr>
+	<div collapse="isCollapsed">
+		<div class="well well-large">Some content</div> 
+	</div>
+</div>
+
+<div ng-controller="AccordionDemoCtrl">
+  <label class="checkbox">
+    <input type="checkbox" ng-model="oneAtATime">
+    Open only one at a time
+  </label>
+
+  <accordion close-others="oneAtATime">
+    <accordion-group heading="Static Header">
+      This content is straight in the template.
+    </accordion-group>
+    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </accordion-group>
+    <accordion-group heading="Dynamic Body Content">
+      <p>The body of the accordion group grows to fit the contents</p>
+        <button class="btn btn-small" ng-click="addItem()">Add Item</button>
+        <div ng-repeat="item in items">{{item}}</div>
+    </accordion-group>
+  </accordion>
+</div>
+
+<a title="Easiest. Binding. Ever!" ui-jq="tooltip" ui-options="{placement:'right'} ">
+  Hover over me for static Tooltip</a>
+ 
+<a data-original-title="{{tooltip}}" ui-jq="tooltip">Fill the input for a dynamic Tooltip:</a>
+<input type="text" ng-model="tooltip" placeholder="Tooltip Content">
+
+ <p ui-scrollfix>They see me scrollin...</p>
+ 
+<!-- <textarea ui-tinymce ng-model="tinymce"></textarea> -- -->
+<!-- <p>{{tinymce}}</p> -- -->
+<div ng-controller="defaultController">
+  
+<ul ui-sortable ng-model="parents">
+  <li ng-repeat="parent in parents">
+    <h3>{{parent.name}}</h3>
+    <ul class="children"
+      ui-sortable="{connectWith:'.children'}"
+      ng-model="parent.children"> 
+      <li ng-repeat="child in parent.children">
+        {{child}}
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<label><input type="checkbox" ng-model="caseSensitive"> Case Sensitive?</label>
+<input placeholder="Enter some text to highlight" value="you" ng-model="highlightText">
+<p ng-bind-html-unsafe="'Hello there, how are you today? I\'m fine thank you.' | highlight:highlightText:caseSensitive"></p>
+ 
+<style>
+.ui-match { background: yellow; }
+</style>

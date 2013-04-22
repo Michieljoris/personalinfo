@@ -1,0 +1,8 @@
+* Add headers, different size by user
+
+* editable expandable boxes with title above them
+User can add/insert them and remove them to customize the doc.
+Box can have a special frame around it tickbox
+* Table of data
+Such as contacts, list of organisatioons, medications, income and funding
+* Daily routines

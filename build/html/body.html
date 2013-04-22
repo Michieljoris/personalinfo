@@ -1,0 +1,50 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">Pave the Way</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="">
+            <a href="#!guide">Guide</a>
+          </li>
+          <li class="">
+            <a href="#!template">Template</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown pull-right">
+	<button id="printButton" class="btn btn-primary pull-right">Print</button>
+	<button id="pdfButton" class="btn btn-primary pull-right">Pdf</button>
+	<button ng-hide="isGuideView()" id="exportButton" class="btn btn-primary pull-right">Export</button>
+	<button ng-hide="isGuideView()" id="importButton" class="btn btn-primary pull-right">Import</button>
+	<button ng-hide="isGuideView()" id="editButton" class="btn btn-primary pull-right">Edit</button>
+	<!-- <ul aria-labelledby="drop5" role="menu" class="dropdown-menu" id="menu3"> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Print</a></li> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Export</a></li> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Download pdf</a></li> -->
+        <!--   <li class="divider" role="presentation"></li>  -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Import</a></li> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Edit</a></li> -->
+        <!-- </ul> -->
+      </div>
+      
+      <!-- <button id="adminButton" class="btn btn-primary pull-right dropdown-toggle">Admin</button> -->
+    </div>
+  </div>
+</div>
+
+<header id="overview" class="jumbotron subhead">
+  <div class="container">
+    <h1>A Document of Personal Information</h1>
+    <p class="lead">Ideas & Strategies</p>
+  </div>
+</header>
+
+
+<div class="ng-view"></div>
+

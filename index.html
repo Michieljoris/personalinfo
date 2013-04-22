@@ -1,0 +1,77 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" lang="en">
+  <head id="head--"><title>A Document of Personal Information</title><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!--[if lte IE 8]>
+    <script>
+      // The ieshiv takes care of our ui.directives, bootstrap module directives and 
+      // AngularJS's ng-view, ng-include, ng-pluralize and ng-switch directives.
+      // However, IF you have custom directives (yours or someone else's) then
+      // enumerate the list of tags in window.myCustomTags
+
+      window.myCustomTags = [ 'yourDirective', 'somebodyElsesDirective' ]; // optional
+    </script>
+    <script src="js/angular-ui-ieshiv.js"></script>
+    <![endif]-->						    
+<script src="http://localhost:9090/skewer"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"><link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css"><link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.2.custom.css"><link rel="stylesheet" type="text/css" href="css/angular-ui.css"><link rel="stylesheet" type="text/css" href="css/main2.css">
+</head>
+  <body id="ng:app" ng:app="myApp" ng-controller='mainCntl'>
+   <div id="wrapper--"><div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="#">Pave the Way</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="">
+            <a href="#!guide">Guide</a>
+          </li>
+          <li class="">
+            <a href="#!template">Template</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown pull-right">
+	<button id="printButton" class="btn btn-primary pull-right">Print</button>
+	<button id="pdfButton" class="btn btn-primary pull-right">Pdf</button>
+	<button ng-hide="isGuideView()" id="exportButton" class="btn btn-primary pull-right">Export</button>
+	<button ng-hide="isGuideView()" id="importButton" class="btn btn-primary pull-right">Import</button>
+	<button ng-hide="isGuideView()" id="editButton" class="btn btn-primary pull-right">Edit</button>
+	<!-- <ul aria-labelledby="drop5" role="menu" class="dropdown-menu" id="menu3"> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Print</a></li> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Export</a></li> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Download pdf</a></li> -->
+        <!--   <li class="divider" role="presentation"></li>  -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Import</a></li> -->
+        <!--   <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Edit</a></li> -->
+        <!-- </ul> -->
+      </div>
+      
+      <!-- <button id="adminButton" class="btn btn-primary pull-right dropdown-toggle">Admin</button> -->
+    </div>
+  </div>
+</div>
+
+<header id="overview" class="jumbotron subhead">
+  <div class="container">
+    <h1>A Document of Personal Information</h1>
+    <p class="lead">Ideas & Strategies</p>
+  </div>
+</header>
+
+
+<div class="ng-view"></div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.10.2.custom.min.js"></script><script type="text/javascript" src="js/bootstrap.js"></script><script type="text/javascript" src="js/angular.min.js"></script><script type="text/javascript" src="js/angular-ui.js"></script><script type="text/javascript" src="js/ui-bootstrap-tpls-0.2.0.js"></script><script type="text/javascript" src="js/modernizr.js"></script><script type="text/javascript" src="js/myangular.js"></script><script type="text/javascript" src="js/templateCntl.js"></script><script type="text/javascript" src="js/myjs.js"></script><script type="text/javascript" src="js/router.js"></script>
+</div> 
+   <div id="scroll-to-top" ><a id="bla" hef="#" title="Go to Top"></a></div>
+  </body>
+</html>	
