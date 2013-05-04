@@ -31,11 +31,11 @@ var exports = {
     ,prettyPrintHtml: false
     // ,tagIdPostfix: '__' //can be overridden per template
     ,paths: {
-        root: '/home/michieljoris/www/personalinfo/'
+        root: process.cwd()
         //relative to this root:
         ,partials: 'build/'  //can be overridden per template
-        ,out:'built' 
-        ,js: 'js'
+        ,out:'www/built' 
+        ,js: 'www/js'
     }
     ,routes : [
         ['guide', '/built/guideView.html'],
@@ -129,7 +129,7 @@ var exports = {
             }
             //Main layout
             ,{// id: 'page' 
-                pathOut: ''
+                pathOut: 'www/'
                 ,out: 'index.html' //optional, relative to root
                 ,src: 'html/basicPage.html'
                 //Maps tag ids to partial ids. Tag ids have to be
@@ -157,6 +157,4 @@ var exports = {
         
     }
 };
-
-
 
