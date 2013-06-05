@@ -53,13 +53,18 @@ var exports = {
         ids: {
             title: '<title>A Document of Personal Information</title>'
             ,skewer:'<script src="http://localhost:9090/skewer"></script>'
+            ,persona:'<script src="https://login.persona.org/include.js"></script>'
         }
         ,metaBlock : {
             id: 'meta',
             tags: [ { charset:'utf-8' },
                     { name: "viewport"
                       ,content: "width=device-width, initial-scale=1, maximum-scale=1"
-                    } ]
+                    },
+                    //stops IE using compatibility mode, important for Persona
+                    { 'http-equiv':"X-UA-Compatible", 'content':"IE=Edge"
+                    }
+                  ]
         }
         ,linkBlock:  {
             id: 'myLinkBlock',
@@ -68,6 +73,7 @@ var exports = {
                 ,'bootstrap-responsive'
                 ,'jquery-ui-1.10.2.custom'
                 ,'angular-ui'
+                ,'persona-buttons'
                 ,'main2'
             ]
             ,path: 'css/'
@@ -89,6 +95,14 @@ var exports = {
                     ,'angular-ui'
                     ,'ui-bootstrap-tpls-0.2.0'
                     ,'modernizr'
+                    ,"jquery.ui.touch-punch.min"
+                    ,"jquery.mjs.nestedSortable"
+                    ,"tinymce/tiny_mce.js"
+                    ,"crypt"
+                    ,"sjcl"
+                    ,"cookie"
+                    ,'persona_include'
+                    ,'persona'
                     // ,'tinymce/js/tinymce/jquery.tinymce.min'
                     ,'myangular'
                     ,'templateCntl'
@@ -123,7 +137,8 @@ var exports = {
               ,tagIdPostfix: '--' //can be overridden per template
               ,out: 'guideTemplate.html'
               ,mapping: {
-                  // menu: 'html/docmenu',
+                  tpldoc: "html/tpldoc.html"
+                  ,tplmenu: 'html/tplmenu'
                   // doc: 'markdown/doc.md'
               }
             }
@@ -139,7 +154,9 @@ var exports = {
                 //converted to html. Partials in an array will be
                 //concatenated before inserted at the tag id element
                 ,mapping: {
-                    head: ['title', 'meta', 'html/ieshim',  'skewer', 'headJsBlock', 'myLinkBlock'
+                    head: ['title', 'meta', 'html/ieshim',  'skewer',
+                           // 'persona',
+                           'headJsBlock', 'myLinkBlock'
                            // ,'_linkBlock'
                           ],
                     wrapper: [

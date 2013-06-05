@@ -18,6 +18,10 @@
         </ul>
       </div>
       <div class="dropdown pull-right">
+	<!-- <a href="#" class="persona-button"><span>Sign in with your Email</span></a> -->
+	<a ng-hide="signedIn" href="#" class="persona-button dark" ng-click="signin()"><span>Sign in</span></a>
+	<a ng-show="signedIn" href="#" class="persona-button dark" ng-click="signout()"><span>Sign out</span></a>
+	<!-- <a href="#" class="persona-button orange"><span>Sign in with your Email</span></a> -->
 	<button id="printButton" class="btn btn-primary pull-right">Print</button>
 	<button id="pdfButton" class="btn btn-primary pull-right">Pdf</button>
 	<button ng-hide="isGuideView()" id="exportButton" class="btn btn-primary pull-right">Export</button>

@@ -1,8 +1,58 @@
-* Add headers, different size by user
+* Features
+** Hide section
+** Remove section
+** Rearrange sections
+** Preview document
+** Export as pdf (guide and doc)
+   
+* Share document:
+** pdf
+** log into site   
+  with basic authentication, which gives reading rights and editing
+  rights, but not saving rights to the server. 
+   
+* Produce document
+** download pdf
+** email pdf
+** print pdf
+   
+* Store raw, editable data:
+** local (pouchdb)
+** dropbox
+** server
+** iriscouch (when served from there)
+** import/export file
+   
 
-* editable expandable boxes with title above them
-User can add/insert them and remove them to customize the doc.
-Box can have a special frame around it tickbox
-* Table of data
+* Kinds of data:
+** Table of data
 Such as contacts, list of organisatioons, medications, income and funding
-* Daily routines
+** Images
+** Videos
+** Text (formatted, so tinymce perhaps?)
+   
+   
+* securitiy!!! 
+  https://developer.mozilla.org/en-US/docs/Mozilla/Persona/Security_Considerations?redirectlocale=en-US&redirectslug=Persona%2FSecurity_Considerations
+  
+  Implement CSRF protection
+
+In a CSRF (Cross-Site Request Forgery) login attack, an attacker uses a cross-site request forgery to log the user into a web site using the attacker's credentials.
+
+For example: a user visits a malicious web site containing a form element. The form's action attribute is set to an HTTP POST request to http://www.google.com/login, supplying the attacker's username and password. When the user submits the form, the request is sent to Google, the login succeeds and the Google server sets a cookie in the user's browser. Now the user's unknowingly logged into the attacker's Google account.
+
+The attack can be used to gather sensitive information about the user. For example, Google's Web History feature logs all the user's Google search terms. If a user is logged into the attacker's Google account and the attacker has Web History enabled, then the user is giving the attacker all this information.
+
+CSRF login attacks, and potential defenses against them, are documented more fully in Robust Defenses for Cross-Site Request Forgery (PDF). They're not specific to Persona: most login mechanisms are potentially vulnerable to them.
+
+There are a variety of techniques which can be used to protect a site from CSRF login attacks, which are documented more fully in the study above.
+
+One approach is to create a secret identifier in the server, shared with the browser, and require the browser to supply it when making login requests. For example:
+
+As soon as the user lands on your site, before they try to log in, create a session for them on the server. Store the session ID in a browser cookie.
+On the server, generate a random string of at least 10 alphanumeric characters. A randomly generated UUID is a good option. This is the CSRF token. Store it in the session.
+Deliver the CSRF token to the browser by either embedding it in JavaScript or HTML as a hidden form variable.
+Ensure that the AJAX submission or form POST includes the CSRF token.
+On the server side, before accepting an assertion, check that the submitted CSRF token matches the session-stored CSRF token.
+   
+

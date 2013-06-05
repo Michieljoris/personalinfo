@@ -1,0 +1,11 @@
+<div class="shadow">
+  <ol>
+    <li ya-tree="child in data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
+      <div>
+        <input disabled value="{{child.title}}" /> <em>({{$depth}})</em>
+        <input ng-model="child.content" />
+      </div>
+      <ol ng-class="{pregnant:child.children.length}"></ol>
+    </li>
+  </ol>
+</div>
