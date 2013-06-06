@@ -32,7 +32,9 @@ Such as contacts, list of organisatioons, medications, income and funding
 ** Text (formatted, so tinymce perhaps?)
    
    
-* securitiy!!! 
+* security!!! 
+  http://www.adambarth.com/papers/2008/barth-jackson-mitchell-b.pdf
+  http://shiflett.org/articles/session-hijacking
   https://developer.mozilla.org/en-US/docs/Mozilla/Persona/Security_Considerations?redirectlocale=en-US&redirectslug=Persona%2FSecurity_Considerations
   
   Implement CSRF protection
@@ -56,3 +58,9 @@ Ensure that the AJAX submission or form POST includes the CSRF token.
 On the server side, before accepting an assertion, check that the submitted CSRF token matches the session-stored CSRF token.
    
 
+** use secure cookies:
+https://github.com/jed/cookies
+https://github.com/jed/keygrip
+http://mahoney.eu/2012/05/23/couchdb-cookie-authentication-nodejs-nano/#.UbAdzqBCAWM
+** angular security 
+http://docs.angularjs.org/api/ng.$http

@@ -1,0 +1,13 @@
+<div class="modal-header"> 
+  <h1>{{title}}</h1>
+</div>
+<div class="modal-body">
+  <ul>
+    <li ng-repeat="doc in docs">
+      <a>{{doc}}</a>
+      </li>
+    </ul>
+</div>
+<div class="modal-footer">
+  <button ng-click="close(result)" class="btn btn-primary" >Close</button>
+</div>

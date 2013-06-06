@@ -1,4 +1,4 @@
-<div class="shadow">
+<div ng-hide="viewMode" class="shadow">
   <ol>
     <li ya-tree="child in data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
       <div>
@@ -9,3 +9,6 @@
     </li>
   </ol>
 </div>
+<div ng-show="viewMode">
+  {{data|json}}
+ </div> 

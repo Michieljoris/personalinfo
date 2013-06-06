@@ -3,7 +3,7 @@
 /*jshint maxparams:7 maxcomplexity:7 maxlen:150 devel:true newcap:false*/ 
 
 var dev = process.env.BB_SERVER_DEV;
-
+dev = true;
 
 if (dev) console.log('\n------Server running with development settings------\n');
 
@@ -14,12 +14,13 @@ var server = require('bb-server')
 ,signout = require("./signout.js")
 ,dropbox_authorize = require("./dropbox_authorize.js")
 ,dropbox_connect = require("./dropbox_connect.js")
-,cookie = require("./readCookie.js")
-// save = require("./save")
+,debug = require("./debug.js")
+,db = require("./db.js")
+// db = require("./db")
 ;
 
 var options = { 
-        root: 'www'
+        root: '../www'
     // "forward": [
     //     { "prefix": "local",
     //       "target": "http://localhost:5984" },
@@ -31,19 +32,20 @@ var options = {
     ,"silent": false
     // ,"port": 7090
     ,postHandlers: {
-        // "/" : save
+        // "/" : db
         "/sendmail" : sendMail
         ,"/signin": signin
         ,"/signout": signout
+        ,"/db": db
         }
     ,getHandlers: {
-        "/cookie": cookie,
+        "/debug": debug,
         "/sync": sync,
         "/dropbox_authorize": dropbox_authorize,
         "/dropbox_connect": dropbox_connect
     }
     ,sessions: {
-        expires: 300
+        expires: 30*24*60*60  //one month
     }
 };
 

@@ -14,17 +14,44 @@ exports.handleGet = function(req, res) {
             cookies[ parts[ 0 ].trim() ] = ( parts[ 1 ] || '' ).trim();
         });
     } 
-    
-    console.log('session:', req.session);
-    console.log(cookies);
-    console.log(req.session.uid());
     res.writeHead(200, {
         'Content-Type': 'text/html'
 	// 'last-modified': GMTdate
     });
-    res.end();
     
-    // var app_key= dropboxApp.data.app_key;
+    console.log('session:', req.session);
+    console.log(cookies);
+    res.write('<pre>');
+    res.write('<b>Cookies:</b> ' + JSON.stringify(cookies, null,' ')+'');
+    console.log(req.session.uid());
+    // req.session.get(function(error, meta, data) {
+    //     res.write('<br><b>Session:</b>');
+    //     res.write('<br>UID: ' + req.session.uid());
+    //     if (meta && meta.expires) {
+    //         res.write('<br>expires:' + new Date(meta.expires));
+    //     }
+    //     res.write('<br>Meta: ' + JSON.stringify(meta, null,' '));
+    //     res.write('<br>Data: ' + JSON.stringify(data, null,' '));
+    //     res.end('</pre>');
+        
+    // });
+    
+    req.session.get().when(
+        function(result) {
+            var meta = result.meta, data = result.data;
+            res.write('<br><b>Session:</b>');
+            res.write('<br>UID: ' + req.session.uid());
+            if (meta && meta.expires) {
+                res.write('<br>expires:' + new Date(meta.expires));
+            }
+            res.write('<br>Meta: ' + JSON.stringify(meta, null,' '));
+            res.write('<br>Data: ' + JSON.stringify(data, null,' '));
+            res.end('</pre>');
+        
+        }
+    );   
+    
+    // app_key= dropboxApp.data.app_key;
     // var app_secret = dropboxApp.data.app_secret;
 
     // var app   = dbox.app({ "app_key": app_key, "app_secret": app_secret });

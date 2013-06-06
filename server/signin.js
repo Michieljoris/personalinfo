@@ -4,8 +4,20 @@
 
 var https = require('https');
 var querystring = require('querystring');
-var VOW = require('./vow.js').VOW;
+var VOW = require('./vow').VOW;
 var audience = process.env.AUDIENCE;
+
+var server = require('nano')('http://localhost:5984');
+// var db = server.use('personalinfo');
+
+var db = require('nano')(
+  { "url"             : "http://localhost:5984/personalinfo_users"
+  // { "url"             : "http://michieljoris.iriscouch.com/personalinfo_users"
+  // , "request_defaults" : { "proxy" : "http://someproxy" }
+  , "log"             : function (id, args) { 
+      console.log(id, args);
+    }
+  });
 
 var options = {
     hostname: 'verifier.login.persona.org',
@@ -61,7 +73,7 @@ function sendResponse(res, obj) {
     var descr = obj.reason;
     if (obj.success) {
         var expireDate = new Date(new Date().getTime() + 24*60*60).toUTCString();
-        headers['Set-Cookie'] = 'persona=' +obj.email + '; expires=' + expireDate;
+        // headers['Set-Cookie'] = 'persona=' +obj.email + '; expires=' + expireDate;
         returnCode = 200; 
         descr = "OK";
     }
@@ -70,33 +82,79 @@ function sendResponse(res, obj) {
     res.end();
 }
 
+function isValid(data, session) {
+    var vow = VOW.make();
+    console.log(data);
+    var valid = data && data.status === 'okay';
+    var email = valid ? data.email : null;
+    if (valid) {
+        console.log('assertion verified succesfully for email:', email);
+        if (session) {
+            session.set({
+                email: email,
+                verified: true
+            }, function(err) {
+                if (!err) {
+                    // sendResponse(res, { success: true, email: email});   
+                    vow.keep(email);
+                }
+                else {
+                    vow['break']('Could not save session data!!');
+                }
+            });
+        } 
+    }
+    else {
+        console.log("failed to verify assertion:", data.reason);   
+        // sendResponse(res, { success: false, reason: data.reason});
+        vow['break'](data.reason);
+    }
+    return vow.promise;
+}
+
+function saveUser(email) {
+    var vow = VOW.make();
+    
+    db.get(email, function(err, doc, header) {
+        if (err) {
+            db.insert({ lastLogin: new Date() }, email, function(err, body, header) {
+                if (err) { vow['break']("Couldn't add ' + email ' to the user database!! ' + err.reaon"); } 
+                else vow.keep(email);
+            });
+        }
+        else {
+            doc.lastLogin = new Date();
+            db.insert(doc, email, function(err, doc, header) {
+                if (err) { vow['break']("Couldn't add ' + email ' to the user database!! ' + err.reaon"); } 
+                else vow.keep(email);
+            });
+        }
+    });
+    
+    return vow.promise;
+}
+
 function verify(session, assertion, res) {
     verifyReq(assertion).when(
         function(data) {
-            console.log(data);
-            var valid = data && data.status === 'okay';
-            var email = valid ? data.email : null;
-            if (valid) {
-                console.log('assertion verified succesfully for email:', email);
-                if (session) session.set('email', email);
-                sendResponse(res, { success: true, email: email});
+            return isValid(data, session, res);
+        }).when (
+            saveUser
+        ).when(
+            function(email) {
+                sendResponse(res, { success: true, email: email });
+            },
+            function(error) {
+                sendResponse(res, { success: false, reason: error });
             }
-            else {
-                console.log("failed to verify assertion:", data.reason);   
-                sendResponse(res, { success: false, reason: data.reason});
-            }
-        },
-        function(error) {
-            console.log('post error: ', error);
-            sendResponse(res, { success: false, reason: error });
-        }
-    );
+        );
 }
 
 exports.handlePost= function(req, res) {
     console.log('Signin is handling post!!');
     console.log('x-forwarded-for:' + req.headers['x-forwarded-for']);
-    console.log('session email is: ' , req.session.get('email'));
+    
+    // console.log('session email is: ' , req.session.get('email'));
     
     var data = '';
     req.on('data', function(chunk) {

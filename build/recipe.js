@@ -125,7 +125,15 @@ var exports = {
             //     },
         ]
         ,template: [
-            { src: 'views/guide.html' 
+            { src: 'views/openDialog.html' 
+              ,tagIdPostfix: '--' //can be overridden per template
+              ,out: 'openDialog.html'
+              ,mapping: {
+                  menu: 'html/docmenu',
+                  doc: 'markdown/doc.md'
+              }
+            }
+            ,{ src: 'views/guide.html' 
               ,tagIdPostfix: '--' //can be overridden per template
               ,out: 'guideView.html'
               ,mapping: {

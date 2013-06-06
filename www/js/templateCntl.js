@@ -12,14 +12,9 @@ function templateCntl($scope, $timeout) {
     //     ,content: 'and this is the content'
     // };
     // $scope.items = items;
+    console.log('parent:',$scope.$parent) ;
+    console.log($scope);
     
-    
-    $scope.data = {
-        children: [{
-            title: 'hello, world',
-            children: []
-        }]
-    };
     
     $scope.toggleMinimized = function (child) {
         child.minimized = !child.minimized;

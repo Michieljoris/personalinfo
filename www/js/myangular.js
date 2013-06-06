@@ -1,4 +1,4 @@
-/*global cookie:false angular:false $:false jQuery:false*/
+/*global localStorage:false angular:false $:false jQuery:false*/
 /*jshint strict:false unused:true smarttabs:true eqeqeq:true immed: true undef:true*/
 /*jshint maxparams:7 maxcomplexity:7 maxlen:150 devel:true newcap:false*/ 
 
@@ -142,27 +142,150 @@ function scrollOnClick() {
     });
 }
 
-function mainCntl($location, $scope, $http) {
+function save($http) {
+    $http({ 
+        method: 'POST',
+        url: '/db', // This is a URL on your website.
+        data: {
+            mydata: 123,
+            moredata: "a string"
+        } })
+        .success(function(data, status, headers, config) {
+            console.log('save post success', data);
+        })
+        .error(function(data, status, headers, config) {
+            console.log('save post failure', status,  data);
+        });
+}
+
+function mainCntl($location, $scope, $http, $dialog, dialogData) {
     console.log('in main');
     initPersona($scope, $http);
     
     $scope.isGuideView = function() {
-        return $location.$$url === '/guide';
+        return $location.$$url !== '/template';
         };
     
-    $scope.signout = function() {
+    $scope.signout = function($event) {
+        $event.preventDefault();
         console.log('Logging out');
         navigator.id.logout();
         
     };
     
-    $scope.signin = function() {
+    $scope.signin = function($event) {
+        $event.preventDefault();
         console.log('Logging in');
         navigator.id.request();
         
+        
     };
     
+    $scope.data = {
+        children: [{
+            title: 'hello, world',
+            children: []
+        }]
+    };
+    
+    $scope.docChoices =[
+         'New', 'Delete', 'Rename', 'Access'
+    ];
+    
+    $scope.title = "A Document of Personal Information";
+    $scope.editButtonText = "Edit";
+    $scope.radioModel = "local";
+    $scope.viewMode = false;
+    
+    $scope.click = function($event, selection) {
+        $event.preventDefault();
+        switch (selection) {
+          case 'edit':
+            $scope.viewMode = !$scope.viewMode;
+            $scope.editButtonText = $scope.viewMode ? 'Edit' : 'Done';
+            break;
+          case 'open':
+            openDoc[$scope.radioModel]($dialog, dialogData);
+            break;
+          case 'save':
+            saveDoc[$scope.radioModel]($dialog, dialogData);
+            break;
+        default: console.log(selection  + ' is not implemented yet..');
+        }
+    }; 
 }
+
+myAppModule.factory('dialogData', function() {
+    var data = {};
+    return data;
+});
+
+
+function DialogController($scope, dialog, dialogData){
+    $scope.title = dialogData.title;
+    $scope.docs = dialogData.docs;
+    $scope.close = function(result){
+        dialog.close(result);
+    };
+}
+function openDialog($dialog, cb) {
+    var opts = {
+        backdrop: true,
+        backdropFade: true,
+        keyboard: true,
+        // dialogFade: true,
+        backdropClick: true,
+        templateUrl: 'built/openDialog.html',
+        controller: 'DialogController'
+    };
+    var d = $dialog.dialog(opts);
+    d.open().then(function(result){
+        if(result)
+        {
+            cb(result);
+        }
+    });
+}
+
+
+var openDoc = {
+    local: function ($dialog, dialogData) {
+        dialogData.title = "Local storage";
+        dialogData.docs = Object.keys(localStorage);
+        openDialog($dialog, function(result) {
+            console.log(result);
+        });
+    }
+    ,dropbox: function() {
+    
+    }
+    ,database: function() {
+    
+    }
+    ,disk: function() {
+    
+    }
+};
+
+
+var saveDoc = {
+    local: function ($dialog, dialogData) {
+        dialogData.title = "Local storage";
+        dialogData.docs = Object.keys(localStorage);
+        openDialog($dialog, function(result) {
+            console.log(result);
+        });
+    }
+    ,dropbox: function() {
+    
+    }
+    ,database: function() {
+    
+    }
+    ,disk: function() {
+    
+    }
+};
 
 
 function DefaultCntl($scope) {

@@ -14,6 +14,7 @@ exports.handlePost = function(req, res) {
     });
     
     req.on('end', function() {
+        req.session.expire();
         res.write(JSON.stringify({ success:true }));
         // data = JSON.parse(data);
         // console.log(data.assertion);
@@ -21,7 +22,8 @@ exports.handlePost = function(req, res) {
     });
     
     req.on('error', function(e) {
-        res.write(JSON.stringify({ success:false, error:e }));
+        req.session.expire();
+        res.write(JSON.stringify({ success:true, error:e }));
         res.end();
     });
     

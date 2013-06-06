@@ -91,8 +91,8 @@ hr.soften {
   position: relative;
   /* padding: 40px 0; */
   color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+  /* text-align: center; */
+  /* text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075); */
   background: #020031; /* Old browsers */
   background: -moz-linear-gradient(45deg,  #020031 0%, #6d3353 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#020031), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
@@ -120,11 +120,11 @@ hr.soften {
 
 /* Link styles (used on .masthead-links as well) */
 .jumbotron a {
-  color: #fff;
-  color: rgba(255,255,255,.5);
-  -webkit-transition: all .2s ease-in-out;
-     -moz-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  /* color: #fff; */
+  /* color: rgba(255,255,255,.5); */
+  /* -webkit-transition: all .2s ease-in-out; */
+  /*    -moz-transition: all .2s ease-in-out; */
+  /*         transition: all .2s ease-in-out; */
 }
 .jumbotron a:hover {
   color: #fff;
@@ -244,7 +244,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 /* Subhead (other pages)
 ------------------------- */
 .subhead {
-  text-align: center;
+  /* text-align: center; */
   border-bottom: 1px solid #ddd;
 }
 .subhead h1 {
@@ -1177,3 +1177,49 @@ textarea, input {
 .minimized > ol {   border: 0 none transparent; }
 .toggle { border: 0 none transparent; background:transparent; width:2em; color:#aaa; }
 button { cursor: pointer }
+
+.pull-right > .dropdown-menu {
+    left: auto;
+    right: auto;
+}
+
+.persona-button {
+    height:24px;
+    margin-top:5px;
+    margin-left:5px;
+    width:120px;
+}
+
+#saveButton {
+    margin-right:10px;
+}
+
+#openButton {
+    margin-right:10px;
+}
+
+#overview h1 {
+    padding-bottom:20px;
+    text-align:center;
+}
+
+/* #Rename { */
+/*     border-bottom:1px #e5e5e5 solid; */
+/* } */
+
+.btn-group > .btn, .btn-group > .dropdown-menu, .btn-group > .popover {
+    font-size: 12px;
+}
+
+.btn-group {
+    padding-right:20px;
+}
+
+#editButton {
+    margin-bottom:24px;
+    width:50px;
+}
+
+.dropdown-menu {
+    min-width:100px;
+}
