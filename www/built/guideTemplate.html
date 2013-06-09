@@ -2,7 +2,7 @@
     <div class="row">
       <div id="tplmenu--" class="span4"><div ng-hide="viewMode">
   <div>
-    <button ng-click="addChild(data)">+ New</button>
+    <button ng-click="addChild(document.data)">+ New</button>
   </div>
   <div class="live">
     <ol ui-nested-sortable="{
@@ -16,7 +16,7 @@
 			    opacity:0.5
 			    }" 
 	ui-nested-sortable-stop="update($event, $ui)">
-      <li ya-tree="child in data.children at ol" ng-class="{minimized:child.minimized}">
+      <li ya-tree="child in document.data.children at ol" ng-class="{minimized:child.minimized}">
 	<div>
           <button class="toggle" ng-click="toggleMinimized(child)" ng-switch on="child.minimized"><span ng-switch-when="true">&#x25B6;</span><span ng-switch-default>&#x25BC;</span></button>
           <input ng-model="child.title" />
@@ -30,12 +30,12 @@
 </div>
 
 <div ng-show="viewMode">
-  {{data|json}}
+  {{document.data|json}}
  </div> 
 </div>
       <div id="tpldoc--"  class="span8" ><div ng-hide="viewMode" class="shadow">
   <ol>
-    <li ya-tree="child in data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
+    <li ya-tree="child in document.data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
       <div>
         <input disabled value="{{child.title}}" /> <em>({{$depth}})</em>
         <input ng-model="child.content" />
@@ -45,7 +45,7 @@
   </ol>
 </div>
 <div ng-show="viewMode">
-  {{data|json}}
+  {{document.data|json}}
  </div> 
 </div> 
     </div>

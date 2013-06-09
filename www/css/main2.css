@@ -1143,7 +1143,7 @@ body {
 }
 .template .ui-state-highlight {
   border: 1px dashed blue;
-  /* background: #ffe; */
+  background: #ffe;
 }
 .live, .shadow {
   float: left;
@@ -1203,9 +1203,9 @@ button { cursor: pointer }
     text-align:center;
 }
 
-/* #Rename { */
-/*     border-bottom:1px #e5e5e5 solid; */
-/* } */
+#Rename { 
+    border-bottom:1px #e5e5e5 solid; 
+} 
 
 .btn-group > .btn, .btn-group > .dropdown-menu, .btn-group > .popover {
     font-size: 12px;
@@ -1223,3 +1223,17 @@ button { cursor: pointer }
 .dropdown-menu {
     min-width:100px;
 }
+
+.modal a:hover {
+    cursor:pointer;
+}
+
+.btn-group>button {
+    width:72px;
+}
+
+.persistSelected, .persistSelected.active {
+    /* color:lightblue; */
+    border-bottom:1px solid #006DCC
+}
+

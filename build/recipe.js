@@ -38,7 +38,7 @@ var exports = {
         ,js: 'www/js'
     }
     ,routes : [
-        ['guide', '/built/guideView.html'],
+        ['guide', '/built/guideView.html', 'guideCntl'],
         ['template', '/built/guideTemplate.html', 'templateCntl']
     ]
     
@@ -54,6 +54,7 @@ var exports = {
             title: '<title>A Document of Personal Information</title>'
             ,skewer:'<script src="http://localhost:9090/skewer"></script>'
             ,persona:'<script src="https://login.persona.org/include.js"></script>'
+            ,filepicker: '<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>'
         }
         ,metaBlock : {
             id: 'meta',
@@ -101,12 +102,16 @@ var exports = {
                     ,"crypt"
                     ,"sjcl"
                     ,"cookie"
-                    ,'persona_include'
+                    ,'persona_include' //to be replaced by include.js from CDN
                     ,'persona'
                     // ,'tinymce/js/tinymce/jquery.tinymce.min'
-                    ,'myangular'
-                    ,'templateCntl'
-                    ,'myjs'
+                    ,'angularModule'
+                    ,'controllers/templateCntl'
+                    ,'controllers/mainCntl'
+                    ,'controllers/guideCntl'
+                    ,'directives/yaTree'
+                    // ,'directives/compile'
+                    ,'persist.js'
                     ,'router'
                     
                 ],
@@ -162,9 +167,10 @@ var exports = {
                 //converted to html. Partials in an array will be
                 //concatenated before inserted at the tag id element
                 ,mapping: {
-                    head: ['title', 'meta', 'html/ieshim',  'skewer',
-                           // 'persona',
-                           'headJsBlock', 'myLinkBlock'
+                    head: ['title', 'meta', 'html/ieshim',  'skewer'
+                           // ,'persona',
+                           ,'headJsBlock', 'myLinkBlock'
+                           ,'filepicker'
                            // ,'_linkBlock'
                           ],
                     wrapper: [

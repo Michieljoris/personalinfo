@@ -1,6 +1,6 @@
 <div ng-hide="viewMode" class="shadow">
   <ol>
-    <li ya-tree="child in data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
+    <li ya-tree="child in document.data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
       <div>
         <input disabled value="{{child.title}}" /> <em>({{$depth}})</em>
         <input ng-model="child.content" />
@@ -10,5 +10,5 @@
   </ol>
 </div>
 <div ng-show="viewMode">
-  {{data|json}}
+  {{document.data|json}}
  </div> 
