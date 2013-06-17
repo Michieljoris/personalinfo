@@ -39,7 +39,8 @@ var exports = {
     }
     ,routes : [
         ['guide', '/built/guideView.html', 'guideCntl'],
-        ['template', '/built/guideTemplate.html', 'templateCntl']
+        ['template', '/built/templateView.html', 'templateCntl'],
+        ['help', '/built/helpView.html', 'helpCntl']
     ]
     
     //Every partial generates a string. How the partial is generated
@@ -75,7 +76,7 @@ var exports = {
                 ,'jquery-ui-1.10.2.custom'
                 ,'angular-ui'
                 ,'persona-buttons'
-                ,'main2'
+                ,'main'
             ]
             ,path: 'css/'
         }
@@ -109,6 +110,7 @@ var exports = {
                     ,'controllers/templateCntl'
                     ,'controllers/mainCntl'
                     ,'controllers/guideCntl'
+                    ,'controllers/helpCntl'
                     ,'directives/yaTree'
                     // ,'directives/compile'
                     ,'persist.js'
@@ -138,6 +140,14 @@ var exports = {
                   doc: 'markdown/doc.md'
               }
             }
+            ,{ src: 'views/help.html' 
+              ,tagIdPostfix: '--' //can be overridden per template
+              ,out: 'helpView.html'
+              ,mapping: {
+                  menu: 'html/helpmenu',
+                  doc: 'markdown/help.md'
+              }
+            }
             ,{ src: 'views/guide.html' 
               ,tagIdPostfix: '--' //can be overridden per template
               ,out: 'guideView.html'
@@ -148,7 +158,7 @@ var exports = {
             }
             ,{ src: 'views/template.html' 
               ,tagIdPostfix: '--' //can be overridden per template
-              ,out: 'guideTemplate.html'
+              ,out: 'templateView.html'
               ,mapping: {
                   tpldoc: "html/tpldoc.html"
                   ,tplmenu: 'html/tplmenu'

@@ -12,6 +12,10 @@ window.mainCntl = function ($location, $scope, $http, $dialog, dialogData, persi
         return $location.$$url !== '/template';
     };
     
+    $scope.isDocumentView = function() {
+        return $location.$$url === '/template';
+    };
+    
     $scope.signout = function($event) {
         $event.preventDefault();
         console.log('Logging out');
@@ -45,12 +49,12 @@ window.mainCntl = function ($location, $scope, $http, $dialog, dialogData, persi
     };
     
     $scope.docChoices =[
-        'New', 'Clone', 'Delete', 'Rename', 'Permissions'
+        'Open', 'New', 'Import' , 'Clone', 'Export', 'Delete', 'Rename', 'Permissions', 'Encrypt'
     ];
     
     
     $scope.viewMode = false;
-    $scope.editButtonText = "View";
+    $scope.editButtonText = "Done";
     
     $scope.rButton = {
         local: "Browser",

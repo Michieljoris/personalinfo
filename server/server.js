@@ -20,7 +20,7 @@ var server = require('bb-server')
 ;
 
 var options = { 
-        root: '../www'
+        root: './www'
     // "forward": [
     //     { "prefix": "local",
     //       "target": "http://localhost:5984" },

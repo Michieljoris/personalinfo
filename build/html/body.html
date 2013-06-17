@@ -13,48 +13,57 @@
             <a href="#!guide">Guide</a>
           </li>
           <li class="">
-            <a href="#!template">Template</a>
+            <a href="#!template">Document</a>
+          </li>
+          <li class="">
+            <a href="#!help">Help</a>
           </li>
         </ul>
       </div>
-      <div class="pull-right" ng-hide="isGuideViewBla()"> 
-	<a ng-hide="signedIn" href="#" class="persona-button blue pull-right" ng-click="signin($event)"><span>Sign in</span></a> 
-	<a ng-show="signedIn" href="#" class="persona-button blue pull-right" ng-click="signout($event)"><span>Sign out</span></a>
-      </div> 
+      <div class="pull-right" ng-hide="isGuideViewBla()">  
+      	<a ng-hide="signedIn" href="#" class="persona-button blue pull-right" ng-click="signin($event)"><span>Sign in</span></a>  
+      	<a ng-show="signedIn" href="#" class="persona-button blue pull-right" ng-click="signout($event)"><span>Sign out</span></a> 
+      </div>  
       
       <button id="shareButton" ng-click="click($event,'share')" class="btn btn-inverse  pull-right ">Share</button>
       <button id="pdfButton" ng-click="click($event,'pdf')" class="btn btn-inverse  pull-right ">Pdf</button>
+      
     </div>
   </div>
 </div>
 
 <header id="overview" class="jumbotron subhead">
   <div class="container">
-    <h1>{{document.title}}</h1>
+    <h1>{{document.title}}
+    </h1>
     
-    <div ng-hide="isGuideView()" class="dropdown pull-left">
-      <button ng-hide="viewMode" class="btn btn-small btn-primary
-      dropdown-toggle ">Document <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-	<li ng-repeat="choice in docChoices">
-	  <a class="" id="{{choice}}" ng-click="click($event,choice)">{{choice}}</a>
-	</li>
-      </ul>
+    <div ng-hide="isGuideView()" class="dropdown pull-right">
+      
+      
+      <button ng-hide="viewModeX" class="btn btn-small btn-primary dropdown-toggle pull-right">Document <span class="caret"></span></button>  
+      <ul class="dropdown-menu">  
+      	<li ng-repeat="choice in docChoices">  
+      	  <a class="" id="{{choice}}" ng-click="click($event,choice)">{{choice}}</a>  
+      	</li>  
+      </ul>  
+      
+      
     </div>
     <p ng-show="isGuideView()" class="lead" style="text-align:center" >Ideas & Strategies</p>
     <p ng-hide="isGuideView()" class="lead">   
-      <button id="editButton" ng-click="click($event,'edit')" class="btn btn-small btn-primary  pull-right ">{{editButtonText}}</button>
-      <button ng-hide="viewMode" id="saveButton" ng-click="click($event,'save')" class="btn btn-small  btn-primary pull-right ">Save</button>
-      <button ng-hide="viewMode" id="openButton" ng-click="click($event,'open')" class="btn btn-small  btn-primary pull-right ">Open</button>
       
-      <span ng-hide="viewMode" class="btn-group pull-right">
-        <button type="button" ng-class="{'persistSelected':persistSource=='database'}" class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'database'">{{rButton.database}}</button>
-        <button type="button" ng-class="{'persistSelected':persistSource=='local'}"
-        class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'local'">{{rButton.local}}</button>
+      <button id="editButton" ng-click="click($event,'edit')" class="btn btn-small btn-primary  pull-left ">{{editButtonText}}</button>
+      
+      <button ng-hide="viewModeX" id="saveButton" ng-click="click($event,'save')" class="btn btn-small btn-primary pull-left ">Save</button>
+      
+      <!-- <span ng-hide="viewMode" class="btn-group pull-right"> -->
+      <!--   <button type="button" ng-class="{'persistSelected':persistSource=='database'}" class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'database'">{{rButton.database}}</button> -->
+      <!--   <button type="button" ng-class="{'persistSelected':persistSource=='local'}" -->
+      <!--   class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'local'">{{rButton.local}}</button> -->
 	
-        <button type="button" ng-class="{'persistSelected':persistSource=='dropbox'}" class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'dropbox'">{{rButton.dropbox}}</button>
-        <!-- <button type="button" ng-class="{'persistSelected':persistSource=='disk'}" class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'disk'">{{rButton.disk}}</button> -->
-      </span>
+      <!--   <button type="button" ng-class="{'persistSelected':persistSource=='dropbox'}" class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'dropbox'">{{rButton.dropbox}}</button> -->
+      <!--   <\!-- <button type="button" ng-class="{'persistSelected':persistSource=='disk'}" class="btn btn-small btn-inverse" ng-model="radioModel" btn-radio="'disk'">{{rButton.disk}}</button> -\-> -->
+      <!-- </span> -->
       
     </p>
     
