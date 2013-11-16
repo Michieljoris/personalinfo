@@ -2,402 +2,215 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Jun  7 17:41:03 2013
+;; Created Wed Jun 19 11:29:00 2013
 ;; Desktop file format version 206
-;; Emacs version 24.2.1
+;; Emacs version 24.1.50.2
 
 ;; Global section:
 (setq desktop-missing-file-warning nil)
-(setq tags-file-name nil)
-(setq tags-table-list nil)
-(setq search-ring nil)
-(setq regexp-search-ring '("other" "\\_<dialogData\\_>" "\\_<openDialog\\_>" "\\_<dialogData\\_>" "opensav" "dialo" "default" "myang" "scrollon" "init" "default" "data" "$scope.data" "data" "toUTC" "data"))
-(setq register-alist (list '(24) '(134217778) (list 82 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk 4424 (get-buffer "signin.js")))) mk)) '(117 . " ") '(0) '(113) '(134217847) '(101 file . "~/emacs/init.el") '(98 file . "~/.bashrc") '(107 file . "~/.emacs.d/my-config/keys.el") '(105 file . "~/.emacs.d/init.el")))
-(setq file-name-history '("~/www/sites/personalinfo/" "~/www/sites/personalinfo/www/js/persist.js" "/home/michieljoris/www/sites/personalinfo/www/js/document.js" "/home/michieljoris/www/sites/personalinfo/www/js/directives/compile.js" "/home/michieljoris/www/sites/personalinfo/www/js/directives/yaTree.js" "~/www/sites/personalinfo/www/js/angularModule.js" "~/www/sites/personalinfo/www/js/controllers/guideCntl.js" "/home/michieljoris/www/sites/personalinfo/build/recipe.js" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/defaultCntl.js" "/home/michieljoris/www/sites/personalinfo/www/js/opensave.js" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/mainCntl.js" "~/www/sites/personalinfo/www/js/controllers/templateCntl.js" "~/www/sites/personalinfo/www/js/controllers" "/home/michieljoris/www/sites/personalinfo/www/js/myjs.js" "~/www/sites/personalinfo/www/js/directives/yaTree.js" "/home/michieljoris/www/sites/personalinfo/www/js/directives/bla.js" "~/www/sites/personalinfo/www/js/directives" "~/www/sites/personalinfo/build/views/openDialog.html" "/home/michieljoris/www/sites/personalinfo/build/html/openDialog.html" "/home/michieljoris/www/sites/personalinfo/build/html/tplmenu.html" "/home/michieljoris/www/sites/personalinfo/build/html/tpldoc.html" "/home/michieljoris/www/sites/personalinfo/build/views/template.html" "/home/michieljoris/www/sites/personalinfo/www/js/templateCntl.js" "/home/michieljoris/www/sites/personalinfo/www/css/main2.css" "~/www/sites/personalinfo/server/db.js" "/home/michieljoris/www/sites/greenglass/server/sync.js" "/home/michieljoris/www/sites/personalinfo/server/sync.js" "/home/michieljoris/mysrc/javascript/bb-server/lib/server.js" "/home/michieljoris/www/sites/firstdoor/server/firstDoorSendMail.js" "/home/michieljoris/www/sites/personalinfo/server/sendMail.js"))
+(setq tags-file-name "/home/michieljoris/mysrc/javascript/roster/_attachments/js/TAGS")
+(setq tags-table-list '("/home/michieljoris/mysrc/javascript/roster/_attachments/js/TAGS"))
+(setq search-ring '("bookmark"))
+(setq regexp-search-ring '("surround" "find-file" "project" "bookmark" "bmkjjj" "bookmark" "bo" "bokkk" "bookmark"))
+(setq register-alist (list '(106 . "jkj") '(24) '(3) '(-1) '(9) '(13) '(8) (list 82 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk 36040 (get-buffer "modes.el")))) mk)) '(0) (desktop-list* 111 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk nil (get-buffer " *temp*<24>")))) mk)) '(117) (desktop-list* 116 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk nil (get-buffer " *temp*<24>")))) mk)) '(119) '(134217832) '(72) '(134217847) '(134217848 . "\367q\367u") '(113) '(101 file . "~/emacs/init.el") '(98 file . "~/.bashrc") '(107) '(105)))
+(setq file-name-history '("/home/michieljoris/emacs/packages/my-elisp-files/keys.el" "/home/michieljoris/emacs/packages/my-elisp-files/modes.el" "~/www/sites/personalinfo/" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/mainCntl.js" "~/www/sites/personalinfo/" "/home/michieljoris/emacs/packages/my-elisp-files/modes.el" "/home/michieljoris/www/sites/personalinfo/personalinfo.org" "/home/michieljoris/www/sites/personalinfo/build/recipe.js" "~/www/sites/personalinfo/.emacs.desktop" "/home/michieljoris/emacs/packages/my-elisp-files/keys.el" "/home/michieljoris/emacs/packages/my-elisp-files/modes.el" "/home/michieljoris/www/sites/personalinfo/.emacs.desktop" "/home/michieljoris/www/sites/personalinfo/desktop" "~/www/sites/personalinfo/" "~/www/sites/personalinfo/desktop" "/home/michieljoris/www/sites/personalinfo/personalinfo.org" "~/www/sites/personalinfo/personalinfo.org" "/home/michieljoris/www/sites/personalinfo/personalinfo.org" "~/temp/tst4" "~/temp/desktoptest" "/home/michieljoris/emacs/packages/my-elisp-files/modes.el" "/home/michieljoris/www/sites/personalinfo/personalinfo.org" "/home/michieljoris/www/sites/personalinfo/www/js/angularModule.js" "/home/michieljoris/www/sites/personalinfo/www/js/angular-resource.min.js" "/home/michieljoris/www/edge/apps/backend/config/app.yml" "/home/michieljoris/www/edge/apps/backend/lib/myMailer.class.php" "/home/michieljoris/www/edge/README.md" "/home/michieljoris/www/edge/apps/backend/config/app.yml" "/home/michieljoris/emacs/packages/my-elisp-files/keys.el" "/home/michieljoris/emacs/packages/my-elisp-files/modes.el"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/persist.js"
-  "persist.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  2931
-  '(3023 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
 (desktop-create-buffer 206
   "/home/michieljoris/www/sites/personalinfo/www/js/controllers/mainCntl.js"
   "mainCntl.js"
   'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  1556
-  '(1405 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/recipe.js"
-  "recipe.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode nodejs-minor-mode hs-minor-mode)
-  4290
-  '(6300 nil)
+  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode tern-mode skewer-mode hs-minor-mode)
+  502
+  '(496 nil)
   nil
   nil
   '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/html/body.html"
-  "body.html"
-  'html-mode
-  '(auto-fill-mode undo-tree-mode window-number-mode autopair-mode global-auto-revert-mode)
-  2700
-  '(2942 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/css/main2.css"
-  "main2.css"
-  'css-mode
-  '(undo-tree-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-css-mode)
-  25384
-  '(25527 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/views/openDialog.html"
-  "openDialog.html"
-  'html-mode
-  '(auto-fill-mode undo-tree-mode window-number-mode autopair-mode global-auto-revert-mode)
-  301
-  '(223 nil)
+  "/home/michieljoris/emacs/packages/my-elisp-files/modes.el"
+  "modes.el"
+  'emacs-lisp-mode
+  '(undo-tree-mode auto-complete-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode paredit-mode eldoc-mode)
+  36272
+  '(37435 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/controllers/templateCntl.js"
-  "templateCntl.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  615
-  '(209 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/views/template.html"
-  "template.html"
-  'html-mode
-  '(auto-fill-mode undo-tree-mode window-number-mode autopair-mode global-auto-revert-mode)
-  156
+  "/home/michieljoris/mysrc/org/notes.org"
+  "notes.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  150
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/html/tplmenu.html"
-  "tplmenu.html"
-  'html-mode
-  '(auto-fill-mode undo-tree-mode window-number-mode autopair-mode global-auto-revert-mode)
-  776
-  '(335 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/angularModule.js"
-  "angularModule.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  198
-  '(228 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/directives/yaTree.js"
-  "yaTree.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  468
-  '(751 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/document.js"
-  "document.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  229
-  '(230 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/controllers/guideCntl.js"
-  "guideCntl.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  1076
-  '(2017 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/directives/compile.js"
-  "compile.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  355
-  '(898 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/www/js/myjs.js"
-  "myjs.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  552
-  '(nil nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/html/tpldoc.html"
-  "tpldoc.html"
-  'html-mode
-  '(auto-fill-mode undo-tree-mode window-number-mode autopair-mode global-auto-revert-mode)
-  430
-  '(83 nil)
+  "/home/michieljoris/emacs/packages/my-elisp-files/keys.el"
+  "keys.el"
+  'emacs-lisp-mode
+  '(undo-tree-mode auto-complete-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode paredit-mode eldoc-mode)
+  1239
+  '(1260 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/signin.js"
-  "signin.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  2156
-  '(4025 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/db.js"
-  "db.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode nodejs-minor-mode hs-minor-mode)
-  1361
-  '(1580 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/server.js"
-  "server.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  1177
-  '(1 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/greenglass/server/sync.js"
-  "sync.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  8978
-  '(9138 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/sendMail.js"
-  "sendMail.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  4458
-  '(5435 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
   "/home/michieljoris/www/sites/personalinfo/www/js/persona.js"
   "persona.js"
   'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  945
-  '(1274 nil)
+  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode tern-mode skewer-mode hs-minor-mode)
+  200
+  '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/build/html/basicPage.html"
-  "basicPage.html"
-  'html-mode
-  '(auto-fill-mode undo-tree-mode window-number-mode autopair-mode global-auto-revert-mode)
+  "/home/michieljoris/.emacs.d/elpa/find-things-fast-readme.txt"
+  "find-things-fast-readme.txt"
+  'text-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  1998
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*"
+  'Info-mode
+  '(undo-tree-mode yas-minor-mode window-number-mode global-auto-revert-mode)
+  2156511
+  '(1 nil)
+  t
+  '("/usr/local/share/info/emacs" "Concept Index" ((history ("dir" "Top" 20062))))
+  '((tab-width . 8) (buffer-file-coding-system . iso-latin-1-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  "/home/michieljoris/www/sites/personalinfo/build/recipe.js"
+  "recipe.js"
+  'js2-mode
+  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode tern-mode skewer-mode hs-minor-mode)
+  713
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/michieljoris/www/sites/personalinfo/personalinfo.org"
+  "personalinfo.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  665
+  '(290 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . emacs-mule-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/michieljoris/mysrc/org/it-notes.org"
+  "it-notes.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  4074
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/michieljoris/mysrc/org/picolisp-notes.org"
+  "picolisp-notes.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
   1
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/lib/store/memory.js"
-  "memory.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  1430
-  '(656 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/lib/sessions.js"
-  "sessions.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  5569
-  '(5570 t)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/debug.js"
-  "debug.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  1498
-  '(1500 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/lib/vow.js"
-  "vow.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  389
-  '(395 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/lib/store/mysql.js"
-  "mysql.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  2834
-  '(1698 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/example_server.js"
-  "example_server.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  640
-  '(840 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/lib/bb-server.js"
-  "bb-server.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  3279
-  '(1997 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/package.json"
-  "package.json"
-  'js-mode
-  '(undo-tree-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode)
-  660
+  "/home/michieljoris/mysrc/org/from-mobile.org"
+  "from-mobile.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  1
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/mysrc/javascript/bb-server/bin/bb-server"
-  "bb-server"
-  'fundamental-mode
-  '(window-number-mode global-auto-revert-mode)
-  864
+  "/home/michieljoris/mysrc/org/language-ref.org"
+  "language-ref.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  1
   '(nil nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/dropbox_authorize.js"
-  "dropbox_authorize.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  1464
-  '(1478 nil)
+  "/home/michieljoris/mysrc/org/project-bootstrap.org"
+  "project-bootstrap.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/firstdoor/www/js/controllers.js"
-  "controllers.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  24725
-  '(1 nil)
+  "/home/michieljoris/mysrc/org/julangart.org"
+  "julangart.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
-  "/home/michieljoris/www/sites/personalinfo/server/sendMail.js"
-  "sendMail.js"
-  'js2-mode
-  '(undo-tree-mode flymake-mode moz-minor-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode skewer-mode hs-minor-mode)
-  243
-  '(243 nil)
+  "/home/michieljoris/mysrc/org/cs_study.org"
+  "cs_study.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/michieljoris/mysrc/org/project-roster.org"
+  "project-roster.org"
+  'org-mode
+  '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
+  16633
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/michieljoris/.emacs.d/elpa/find-things-fast-20111123.2341/find-things-fast-autoloads.el"
+  "find-things-fast-autoloads.el"
+  'emacs-lisp-mode
+  '(undo-tree-mode auto-complete-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode paredit-mode eldoc-mode)
+  1512
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
 
