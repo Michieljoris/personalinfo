@@ -27,8 +27,6 @@ window.mainCntl = function ($location, $scope, $http, $dialog, dialogData, persi
         $event.preventDefault();
         console.log('Logging in');
         navigator.id.request();
-        
-        
     };
     
     $scope.document = {
