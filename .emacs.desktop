@@ -2,12 +2,17 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
+<<<<<<< HEAD
 ;; Created Wed Jun 19 11:29:00 2013
+=======
+;; Created Mon Jun 24 15:31:26 2013
+>>>>>>> d56cd92d1eaabdd12b3e188efc83141ef973675d
 ;; Desktop file format version 206
 ;; Emacs version 24.1.50.2
 
 ;; Global section:
 (setq desktop-missing-file-warning nil)
+<<<<<<< HEAD
 (setq tags-file-name "/home/michieljoris/mysrc/javascript/roster/_attachments/js/TAGS")
 (setq tags-table-list '("/home/michieljoris/mysrc/javascript/roster/_attachments/js/TAGS"))
 (setq search-ring '("bookmark"))
@@ -166,11 +171,29 @@
   '(auto-fill-mode undo-tree-mode yas-minor-mode window-number-mode autopair-mode global-auto-revert-mode)
   1
   '(nil nil)
+=======
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("sicp"))
+(setq register-alist (list '(24) '(134217778) (list 82 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk nil (get-buffer " *temp*")))) mk)) '(117 . " ") '(0) '(113) '(134217847) '(101 file . "~/emacs/init.el") '(98 file . "~/.bashrc") '(107 file . "~/.emacs.d/my-config/keys.el") '(105 file . "~/.emacs.d/init.el")))
+(setq file-name-history '("/home/michieljoris/mysrc/sicp/source/ch1.scm" "~/mysrc/sicp" "/home/michieljoris/www/sites/personalinfo/build/html/helpmenu.html" "/home/michieljoris/www/sites/personalinfo/build/html/docmenu.html" "/home/michieljoris/www/sites/personalinfo/build/markdown/help.md" "/home/michieljoris/www/sites/personalinfo/build/markdown/doc.md" "/home/michieljoris/www/sites/personalinfo/build/views/help.html" "/home/michieljoris/www/sites/personalinfo/build/views/guide.html" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/helpCntl.js" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/guideCntl.js" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/templateCntl.js" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/mainCntl.js" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/guideCntl.js" "/home/michieljoris/www/sites/personalinfo/build/recipe.js" "/home/michieljoris/www/sites/personalinfo/build/html/body.html" "/home/michieljoris/www/sites/personalinfo/build/html/basicPage.html" "~/www/sites/personalinfo/www/css/main.css" "/home/michieljoris/www/sites/personalinfo/www/css/main2.css" "/home/michieljoris/www/sites/personalinfo/www/css/main.css" "/home/michieljoris/www/sites/personalinfo/build/html/body.html" "/home/michieljoris/www/sites/personalinfo/build/html/basicPage.html" "/home/michieljoris/www/sites/personalinfo/build/html/body.html" "/home/michieljoris/www/sites/personalinfo/www/js/controllers/mainCntl.js" "/home/michieljoris/www/sites/personalinfo/build/html/body.html" "/home/michieljoris/www/sites/personalinfo/build/views/template.html" "/home/michieljoris/www/sites/personalinfo/build/recipe.js" "/home/michieljoris/www/sites/personalinfo/personalinfo.org" "/home/michieljoris/www/sites/personalinfo/server/server.js" "~/www/sites/personalinfo/" "~/www/sites/personalinfo/www/js/persist.js"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/michieljoris/mysrc/sicp/source/ch1.scm"
+  "ch1.scm"
+  'scheme-mode
+  '(undo-tree-mode auto-complete-mode window-number-mode autopair-mode global-auto-revert-mode paredit-mode eldoc-mode geiser-autodoc-mode geiser-mode)
+  1091
+  '(1055 nil)
+>>>>>>> d56cd92d1eaabdd12b3e188efc83141ef973675d
   nil
   nil
   '((buffer-file-coding-system . undecided-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
+<<<<<<< HEAD
   "/home/michieljoris/mysrc/org/julangart.org"
   "julangart.org"
   'org-mode
@@ -213,4 +236,15 @@
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix)))
+=======
+  nil
+  "*info*"
+  'Info-mode
+  '(undo-tree-mode window-number-mode global-auto-revert-mode)
+  26438
+  '(26213 nil)
+  t
+  '("/home/michieljoris/.emacs.d/info-files/sicp" "Preface" ((history ("/home/michieljoris/.emacs.d/info-files/sicp" "Preface 1e" 26526) ("/home/michieljoris/.emacs.d/info-files/sicp" "Preface" 23595) ("/home/michieljoris/.emacs.d/info-files/sicp" "Foreword" 12861) ("/home/michieljoris/.emacs.d/info-files/sicp" "Preface" 23595) ("/home/michieljoris/.emacs.d/info-files/sicp" "Foreword" 12861) ("/home/michieljoris/.emacs.d/info-files/sicp" "Dedication" 11508) ("/home/michieljoris/.emacs.d/info-files/sicp" "UTF" 8553) ("/home/michieljoris/.emacs.d/info-files/sicp" "Top" 294) ("/home/michieljoris/.emacs.d/info-files/sicp" "UTF" 8553) ("/home/michieljoris/.emacs.d/info-files/sicp" "Dedication" 11508) ("/home/michieljoris/.emacs.d/info-files/sicp" "Foreword" 12861) ("/home/michieljoris/.emacs.d/info-files/sicp" "Preface" 23595) ("/home/michieljoris/.emacs.d/info-files/sicp" "Preface 1e" 26526) ("/home/michieljoris/.emacs.d/info-files/sicp" "Acknowledgements" 32897) ("/home/michieljoris/.emacs.d/info-files/sicp" "Chapter 1" 39486) ("/home/michieljoris/.emacs.d/info-files/sicp" "1-1" 49122) ("/home/michieljoris/.emacs.d/info-files/sicp" "1-1-1" 52266) ("/home/michieljoris/.emacs.d/info-files/sicp" "1-1" 51976) ("/home/michieljoris/.emacs.d/info-files/sicp" "Chapter 1" 46708) ("/home/michieljoris/.emacs.d/info-files/sicp" "Top" 876) ("dir" "Top" 768))))
+  '((tab-width . 8) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+>>>>>>> d56cd92d1eaabdd12b3e188efc83141ef973675d
 
