@@ -55,7 +55,8 @@ var exports = {
             title: '<title>A Document of Personal Information</title>'
             ,skewer:'<script src="http://localhost:9090/skewer"></script>'
             ,persona:'<script src="https://login.persona.org/include.js"></script>'
-            ,filepicker: '<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>'
+            // ,filepicker: '<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>'
+            ,filepicker: '<script type="text/javascript" src="js/filepicker.js"></script>'
         }
         ,metaBlock : {
             id: 'meta',

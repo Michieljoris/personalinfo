@@ -30,7 +30,7 @@ var options = {
     ,"dir": dev
     ,"index": !dev
     ,"silent": false
-    // ,"port": 7090
+    ,"port": 6003
     ,postHandlers: {
         // "/" : db
         "/sendmail" : sendMail
